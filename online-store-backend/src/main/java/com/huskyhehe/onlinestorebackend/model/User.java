@@ -1,10 +1,13 @@
 package com.huskyhehe.onlinestorebackend.model;
 
-import lombok.Data;
+import lombok.*;
+import org.hibernate.Hibernate;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 @Data
 @Entity
 @Table(name = "users")
