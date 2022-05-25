@@ -2,10 +2,12 @@ package com.huskyhehe.onlinestorebackend.service;
 
 import com.huskyhehe.onlinestorebackend.model.Product;
 import com.huskyhehe.onlinestorebackend.repository.ProductRepository;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Service
 public class ProductServiceImpl implements ProductService {
 
     private final ProductRepository productRepository;
