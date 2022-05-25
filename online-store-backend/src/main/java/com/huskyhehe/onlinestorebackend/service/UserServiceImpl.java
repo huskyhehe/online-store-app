@@ -21,23 +21,18 @@ public class UserServiceImpl implements UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-
     @Override
     public User saveUser(User user) {
-
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setRole(Role.USER);
         user.setCreateTime(LocalDateTime.now());
-
         return userRepository.save(user);
     }
-
 
     @Override
     public Optional<User> findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
-
 
     @Override
     @Transactional // transactional is required when executing an update/delete query.
