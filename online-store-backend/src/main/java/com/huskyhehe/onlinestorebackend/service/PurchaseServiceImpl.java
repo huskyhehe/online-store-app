@@ -3,10 +3,12 @@ package com.huskyhehe.onlinestorebackend.service;
 import com.huskyhehe.onlinestorebackend.model.Purchase;
 import com.huskyhehe.onlinestorebackend.repository.PurchaseRepository;
 import com.huskyhehe.onlinestorebackend.repository.projection.PurchaseItem;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Service
 public class PurchaseServiceImpl implements PurchaseService {
 
     private final PurchaseRepository purchaseRepository;
