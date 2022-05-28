@@ -27,7 +27,7 @@ public class JwtProviderImpl implements JwtProvider {
     @Value("${app.jwt.secret}")
     private String JWT_SECRET;
 
-    @Value("${app.jwt.expiration-in-ms")
+    @Value("${app.jwt.expiration-in-ms}")
     private Long JWT_EXPIRATION_IN_MS;
 
     @Override
