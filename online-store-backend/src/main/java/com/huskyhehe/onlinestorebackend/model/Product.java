@@ -1,12 +1,15 @@
 package com.huskyhehe.onlinestorebackend.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Set;
 
 @Data
+@Getter
+@Setter
+@RequiredArgsConstructor
 @Entity
 @Table(name = "product")
 public class Product {

@@ -1,11 +1,15 @@
 package com.huskyhehe.onlinestorebackend.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Data
+@Getter
+@Setter
 @Entity
 @Table(name = "purchase")
 public class Purchase {
@@ -18,7 +22,7 @@ public class Purchase {
     private Long userId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
+    @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)   //It is only for foreign key.
     private User user;
 
     @Column(name = "product_id", nullable = false)
