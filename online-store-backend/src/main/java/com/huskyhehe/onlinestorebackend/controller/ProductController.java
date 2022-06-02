@@ -8,13 +8,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/product")    // pre-path
+@RequestMapping("api/product")  // pre-path
 public class ProductController {
 
     @Autowired
     private ProductService productService;
 
-    @PostMapping    // api/product
+    @PostMapping // api/product
     public ResponseEntity<?> saveProduct(@RequestBody Product product) {
         return new ResponseEntity<>(productService.saveProduct(product), HttpStatus.CREATED);
     }
@@ -25,8 +25,9 @@ public class ProductController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping     // api/product
+    @GetMapping     //api/product
     public ResponseEntity<?> getAllProducts() {
         return new ResponseEntity<>(productService.findAllProducts(), HttpStatus.OK);
     }
+
 }
